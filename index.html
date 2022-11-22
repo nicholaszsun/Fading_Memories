@@ -1,117 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-<title>Fading Memories</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-<style>
-  body{
-    margin: 0;
-  }
-</style>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>Floating Memories</title>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
 </head>
 
 <body>
-<div class = "conatiner">
-<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+  <a-scene>
+    <!-- List of Assets -->
+    <a-assets>
+      <a-asset-item id="clock" src="assets/Models/retro_antique_desk_clock/scene.gltf"></a-asset-item>
+      <a-asset-item id="frame1" src="assets/Models/pic_1/scene.gltf"></a-asset-item>
+      <a-asset-item id="frame2" src="assets/Models/pic_2/scene.gltf"></a-asset-item>
+      <a-asset-item id="frame3" src="assets/Models/pic_3/scene.gltf"></a-asset-item>
+      <a-asset-item id="frame4" src="assets/Models/pic_4/scene.gltf"></a-asset-item>
+      <a-asset-item id="frame5" src="assets/Models/pic_5/scene.gltf"></a-asset-item>
+      <a-asset-item id="frame6" src="assets/Models/pic_6/scene.gltf"></a-asset-item>
+      <a-asset-item id="frame7" src="assets/Models/pic_7/scene.gltf"></a-asset-item>
+      <a-asset-item id="frame8" src="assets/Models/pic_8/scene.gltf"></a-asset-item>
+      <a-asset-item id="frame9" src="assets/Models/pic_9/scene.gltf"></a-asset-item>
+      <a-asset-item id="frame10" src="assets/Models/pic_10/scene.gltf"></a-asset-item>
+      <a-asset-item id="frame11" src="assets/Models/pic_11/scene.gltf"></a-asset-item>
+    </a-assets>
 
-<script type="importmap">
-{
-"imports": {
-"three": "https://unpkg.com/three@0.146.0/build/three.module.js"
-}
-}
-</script>
+    <!-- Skybox -->
+    <a-sky src='assets/skybox.png'></a-sky>
 
-<script type="module">
-import * as THREE from "https://unpkg.com/three@0.146.0/build/three.module.js"
+    <!-- Camera Pos/Controls -->
+    <a-entity id="rig" rotation="0 0 0" position="0.17004 2.78041 -0.28342">
+      <a-entity id="camera" camera look-controls wasd-controls="acceleration:10"></a-entity>
+    </a-entity>
 
-var camera, scene, renderer, dreams=[];
+    <!-- Clock -->
+    <a-entity
+    id= "clock_pos"
+    gltf-model= "#clock"
+    rotation= "-90 0 0"
+    position= "0 0 6.44677"
+    >
+    <!-- Frame 1 -->
+    <a-entity
+    id= "frame_pos"
+    gltf-model= "#frame1"
+    position= "-2.09555 14.78975 6.04256"
+    rotation= "90 0 0"
+    animation__orbit="property:rotation; dur:10000; from: 0 0 0; to: 90 0 0"
+    >
+    <!-- Frame 2 -->
+    <a-entity
+    id= "frame2_pos"
+    gltf-model= "#frame2"
+    position="4.29523 0.02637 0.29611"
+    rotation= "2.8006780759728005 -33.86 0"
 
-function init(){
-    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-    camera.position.z = 5;
+    >
+    <!-- Frame 3 -->
+    <a-entity
+    id= "frame3_pos"
+    gltf-model= "#frame3"
+    position="4.29523 0.02637 0.29611"
+    rotation= "2.8006780759728005 -33.86 0"
 
-    scene = new THREE.Scene();
+    >
+    <!-- Frame 4 -->
+    <a-entity
+    id= "frame4_pos"
+    gltf-model= "#frame4"
+    position="4.29523 0.02637 0.29611"
+    rotation= "2.8006780759728005 -33.86 0"
 
+    >
+    <!-- Frame 5 -->
+    <a-entity
+    id= "frame5_pos"
+    gltf-model= "#frame5"
+    position="4.29523 0.02637 0.29611"
+    rotation= "2.8006780759728005 -33.86 0"
 
-    renderer = new THREE.WebGLRenderer();
+    >
+    <!-- Frame 6 -->
+    <a-entity
+    id= "frame6_pos"
+    gltf-model= "#frame6"
+    position="4.29523 0.02637 0.29611"
+    rotation= "2.8006780759728005 -33.86 0"
 
-    renderer.setSize( window.innerWidth, window.innerHeight );
+    >
+    <!-- Frame 7 -->
+    <a-entity
+    id= "frame7_pos"
+    gltf-model= "#frame7"
+    position="4.29523 0.02637 0.29611"
+    rotation= "2.8006780759728005 -33.86 0"
+    >
+    <!-- Frame 8 -->
+    <a-entity
+    id= "frame8_pos"
+    gltf-model= "#frame8"
+    position="4.29523 0.02637 0.29611"
+    rotation= "2.8006780759728005 -33.86 0"
 
+    >
+    <!-- Frame 9 -->
+    <a-entity
+    id= "frame9_pos"
+    gltf-model= "#frame9"
+    position="4.29523 0.02637 0.29611"
+    rotation= "2.8006780759728005 -33.86 0"
+    >
+    <!-- Frame 10 -->
+    <a-entity
+    id= "frame10_pos"
+    gltf-model= "#frame10"
+    position="4.29523 0.02637 0.29611"
+    rotation= "2.8006780759728005 -33.86 0"
 
-    document.body.appendChild( renderer.domElement );
-}
+    >
+    <!-- Frame 11 -->
+    <a-entity
+    id= "frame11_pos"
+    gltf-model= "#frame11"
+    position="4.29523 0.02637 0.29611"
+    rotation= "2.8006780759728005 -33.86 0"
 
+    >
 
-function Randomize() {
-    let random_number = Math.floor(Math.random() * 10);
-    return "img" + random_number + ".JPG"
-}
-
-function addDreams(){
-    const loader = new THREE.TextureLoader()
-
-    for ( var z= -1000; z < 1200; z+=20 ) {
-        var geometry  = new THREE.SphereGeometry(16, 16, 32)
-        var material = new THREE.MeshBasicMaterial( {color: 0xffffff, map: loader.load(Randomize())} );
-        var dream = new THREE.Mesh(geometry, material)
-
-
-        dream.position.x = Math.random() * 1000 - 500;
-        dream.position.y = Math.random() * 1000 - 500;
-
-
-        dream.position.z = z;
-
-
-        dream.scale.x = dream.scale.y = 3;
-
-
-        scene.add( dream );
-
-
-        dreams.push(dream);
-    }
-}
-
-function animatedreams() {
-
-
-    for(var i=0; i<dreams.length; i++) {
-
-        let frame;
-        frame = dreams[i];
-        frame.position.z +=  i/10;
-        if(frame.position.z>500) frame.position.z-=3000;
-        dreams[i].rotation.x += 0.01;
-        dreams[i].rotation.y += 0.01;
-    }
-
-
-}
-
-function render() {
-    requestAnimationFrame( render );
-    renderer.render( scene, camera );
-    animatedreams();
-
-}
-
-init();
-addDreams();
-render();
-
-</script>
-<div class="text">
-  <h2>Memories come and go</h2>
-  <p>As we move on with our lives our past memories become distant and
-  the speed in which we forget, reminds us to cherish every moment...</p>
-
-</div>
-</div>
+    </a-entity>
+  </a-scene>
 </body>
 
 </html>
