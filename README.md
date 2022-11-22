@@ -1,5 +1,5 @@
-Memories come and go <br>
+<h1>Memories come and go</h1> <br>
 As we move on with our lives our past memories become distant and the speed in which we forget, reminds us to cherish every moment...
 
-This project symbolizes our memories and that with passing time our past will be forgotten. By having the clock as the platform it represents time. This time is
-to show t
+This project symbolizes our memories and that with passing time our memories will be forgotten. The clock that you stand on represents time. This time is to symbolize
+the cruelty of it and that we can never have enough. As time moves our memories will spiral into a void of whats to be forgotten. 
